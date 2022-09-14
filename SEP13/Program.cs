@@ -1,0 +1,67 @@
+﻿using Sep13library;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sep13
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Movie m1 = new Movie();
+            m1.AddMovieDetails("abc", "Tamil", "Action", 50);
+            Movie m2 = new Movie();
+            m2.AddMovieDetails("ddd", "Tamil", "Romance", 60);
+            Movie m3 = new Movie();
+            m3.AddMovieDetails("aaa", "English", "Mystery", 100);
+            Movie m4 = new Movie();
+            m4.AddMovieDetails("ccc", "Tamil", "Romance", 60);
+            Movie m5 = new Movie();
+            m5.AddMovieDetails("kkk", "Tamil", "Comedy", 110);
+           
+
+            User u1 = new User();
+            User u2 = new User();
+            User u3 = new User();
+            User u4 = new User();
+            User u5 = new User();
+            User u6 = new User();
+
+            u1.AddUser("Naveena", "Sam", "Gold");
+            u2.AddUser("Naveena", "Sam", "Gold");
+            u3.AddUser("Naveena", "Sam", "Gold");
+            u4.AddUser("Naveena", "Sam", "Gold");
+            u5.AddUser("Naveena", "Sam", "Gold");
+            u6.AddUser("Naveena", "Sam", "Gold");
+           
+           
+            u1.BorrowMovie(m1);
+            u2.BorrowMovie(m1);
+            u4.BorrowMovie(m1);
+            Console.WriteLine("Movie 1 Availability " + m1.Availability);
+            u3.BorrowMovie(m1);
+            Console.WriteLine("Movie 1 Availability " + m1.Availability);
+          
+            u6.BorrowMovie(m1);
+            u5.BorrowMovie(m1);
+            
+            u1.BorrowMovie(m2);
+            u2.BorrowMovie(m3);
+            u2.BorrowMovie(m4);
+            u1.BorrowMovie(m3);
+            Console.WriteLine("=================================================");
+            u1.ShowMyList();
+           
+            Console.WriteLine("==================================================");
+            u1.SearchByLanguage("Tamil");
+            Console.WriteLine("==================================================");
+            u1.SearchByGenre("Romance");
+            
+            
+
+        }
+    }
+}
