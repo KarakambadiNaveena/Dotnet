@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sep13library
 {
+    [Serializable()]
     public class Movie
     {
         public static int MoviesCount = 0;
@@ -23,7 +24,8 @@ namespace Sep13library
             MoviesCount++;
             MoviesList.Add(this);
         }
-        public static List<Movie> MoviesList = new List<Movie>();
+        
+       public static List<Movie> MoviesList = new List<Movie>();
         private string _movieName;
 
         public string MovieName
@@ -54,6 +56,7 @@ namespace Sep13library
             get { return _genres; }
             set { _genres = value; }
         }
+      
         private double _cost;
 
         public double Cost
@@ -61,12 +64,9 @@ namespace Sep13library
             get { return _cost; }
             set { _cost = value; }
         }
+        
 
-        //public void AddMovies(Movie s)
-        //{
-        //	MoviesList.Add(s);
 
-        //}
         public void AddMovieDetails(string MovieName, string Language, string genres, double Cost)
         {
             //this.Availability = 10;

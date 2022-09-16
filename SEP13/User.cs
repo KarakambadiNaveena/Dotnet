@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sep13library
 {
+    [Serializable()]
     public class User
     {
         public int moviesBorrowed = 0;
@@ -18,7 +19,7 @@ namespace Sep13library
         public List<Movie> BorrowedMovies;
         public User()
         {
-            this.userLevel = (int)UserLevel.Silver;
+           
             BorrowedMovies = new List<Movie>();
 
         }
@@ -89,16 +90,32 @@ namespace Sep13library
                 }
                 else
                 {
-                    Console.WriteLine("User Can't Borrow Anymore Movies");
+                    Console.WriteLine("User Can't Borrow Anymore");
                 }
             }
             else
             {
-                Console.WriteLine("This Movies isn't Availabale");
+                Console.WriteLine("This Movies is  unAvailabale");
             }
         }
-       
-        public void SearchByLanguage(string language)
+        public void RetrunMovie(Movie m, int days)
+        {
+            if (this.BorrowedMovies.Contains(m))
+            {
+
+                m.Availability++;
+                this.moviesBorrowed--;
+                BorrowedMovies.Remove(m);
+                double totalCost = days * m.Cost;
+                Console.WriteLine($"You Need to Pay {totalCost}");
+            }
+            else
+            {
+                Console.WriteLine($"You didn't Borrow {m.MovieName} movie..");
+            }
+        }
+
+            public void SearchByLanguage(string language)
         {
             foreach (var item in Movie.MoviesList)
             {
