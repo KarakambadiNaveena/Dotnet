@@ -1,0 +1,6 @@
+D:\C#\CustomerOrderServices\CustomerOrderServices\bin\Debug\CustomerOrderServices.dll
+D:\C#\CustomerOrderServices\CustomerOrderServices\bin\Debug\CustomerOrderServices.pdb
+D:\C#\CustomerOrderServices\CustomerOrderServices\obj\Debug\CustomerOrderServices.csproj.AssemblyReference.cache
+D:\C#\CustomerOrderServices\CustomerOrderServices\obj\Debug\CustomerOrderServices.csproj.CoreCompileInputs.cache
+D:\C#\CustomerOrderServices\CustomerOrderServices\obj\Debug\CustomerOrderServices.dll
+D:\C#\CustomerOrderServices\CustomerOrderServices\obj\Debug\CustomerOrderServices.pdb
